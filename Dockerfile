@@ -22,7 +22,7 @@ CMD [ "nginx", "-g", "daemon off;" ]
 # INSTRUÇÕES
 
 # Build: docker build -t nginx .
-# Run: docker run -dp 8080:8080 --name app nginx
+# Run: docker run -dp 8080:8080 -v `pwd`/var/www/html:/var/www/html:ro --name app nginx
 # IP: docker inspect app | grep IPAddress
 # Acesso: docker exec -it app bash
 # Stop: docker stop app
